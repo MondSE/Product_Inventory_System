@@ -233,7 +233,7 @@ namespace Projecttest2 {
 		}
 #pragma endregion
 	//Connection DataBase MySQL
-	String^ connString = "Server=localhost;port=3306;database=dbshop;uid=root;password=admin";
+	String^ connString = "Server=localhost;port=3307;database=dbshop;uid=root;password=admin";
 	MySqlConnection^ conn = gcnew MySqlConnection(connString);
 
 	void clearFields() {

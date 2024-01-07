@@ -60,7 +60,7 @@ namespace Projecttest2 {
 
 	private: System::Windows::Forms::Button^ btnChangeImage;
 	private: System::Windows::Forms::Button^ btnDeleteItem;
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel1;
+
 
 
 	protected:
@@ -98,7 +98,6 @@ namespace Projecttest2 {
 			this->txtName = (gcnew System::Windows::Forms::TextBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->btnDeleteItem = (gcnew System::Windows::Forms::Button());
-			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->tdlProducts))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imgProductImage))->BeginInit();
 			this->tabControl1->SuspendLayout();
@@ -285,19 +284,11 @@ namespace Projecttest2 {
 			this->btnDeleteItem->UseVisualStyleBackColor = true;
 			this->btnDeleteItem->Click += gcnew System::EventHandler(this, &ProductTableForm::btnDeleteItem_Click);
 			// 
-			// flowLayoutPanel1
-			// 
-			this->flowLayoutPanel1->Location = System::Drawing::Point(17, 421);
-			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
-			this->flowLayoutPanel1->Size = System::Drawing::Size(332, 75);
-			this->flowLayoutPanel1->TabIndex = 4;
-			// 
 			// ProductTableForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(729, 505);
-			this->Controls->Add(this->flowLayoutPanel1);
+			this->ClientSize = System::Drawing::Size(729, 426);
 			this->Controls->Add(this->tabControl1);
 			this->Controls->Add(this->txtProductDescription);
 			this->Controls->Add(this->imgProductImage);
@@ -319,7 +310,7 @@ namespace Projecttest2 {
 		}
 #pragma endregion
 	//Connection DataBase MySQL
-	String^ connString = "Server=localhost;port=3306;database=dbshop;uid=root;password=admin";
+	String^ connString = "Server=localhost;port=3307;database=dbshop;uid=root;password=admin";
 	MySqlConnection^ conn = gcnew MySqlConnection(connString);
 
 	void populateTable() {
